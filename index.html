@@ -12,8 +12,14 @@
     body {
       font-family: 'Hind Siliguri', Arial, sans-serif;
       margin: 0;
-      background: #f4f6f8;
       color: #222;
+
+      /* Premium Educational Background */
+      background: linear-gradient(to right, #f4f6f8, #e9f1f7),
+                  url('https://www.transparenttextures.com/patterns/pw-maze-white.png');
+      background-repeat: repeat;
+      background-attachment: fixed;
+      scroll-behavior: smooth;
     }
 
     .container {
@@ -102,6 +108,106 @@
       border: none;
     }
 
+    /* Footer */
+    .footer {
+      background: #0a3d62;
+      color: #fff;
+      text-align: center;
+      padding: 15px;
+      margin-top: 40px;
+      font-size: 14px;
+    }
+
+    /* Responsive */
+    @media (max-width: 600px) {
+      .main-title {
+        font-size: 24px;
+      }
+      .logo {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+      .logo img {
+        height: 80px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="navbar">
+    📚 Fusion PDF Library | SSC-27 by Imran
+  </div>
+
+  <div class="container">
+    <div class="logo">
+      <img src="logo.png" alt="Fusion Logo" />
+      <h1 class="main-title">উদ্যম - UDDAM Admission & Academic Care</h1>
+    </div>
+
+    <div class="quote"><b>"Never Let Your Mind Dominate Your Conscience" — Imran</b></div>
+
+    <div class="section-title">Physics</div>
+    <ul>
+      <li><a href="#" onclick="loadPDF('SSC_Motion.pdf')">SSC Physic Lecture Sheet Ch-2 Motion (গতি)</a></li>
+      <li><a href="#" onclick="loadPDF('SSC_Force.pdf')">SSC Physics Lecture Sheet Ch-3 Force (বল)</a></li> 
+      <li><a href="#" onclick="loadPDF('Work_p_E.pdf')">SSC Physics Lecture Sheet Ch-4 Work, Energy & Power (কাজ,শক্তি ও ক্ষমতা)</a></li>
+      <li><a href="#" onclick="loadPDF('phys_ch7_wave_sound.pdf')">SSC Physics Lecture Sheet Ch-7 Waves & Sound (তরঙ্গ ও শব্দ)</a></li>
+    </ul>
+
+    <div class="section-title">Chemistry</div>
+    <ul>
+      <li><a href="#" onclick="loadPDF('chem_ch1_intro.pdf')">SSC Chemistry Chapter-1 Introduction</a></li>
+      <li><a href="#" onclick="loadPDF('chem_bonding_notes.pdf')">SSC Chemistry Chemical Bonding</a></li>
+      <li><a href="#" onclick="loadPDF('chem_reaction_rates.pdf')">Reaction Rate & Equilibrium</a></li>
+    </ul>
+
+    <div class="section-title">Mathematics</div>
+    <ul>
+      <li><a href="#" onclick="loadPDF('math_ch1_set.pdf')">Math Chapter-1: Set & Function</a></li>
+      <li><a href="#" onclick="loadPDF('math_ch2_algebra.pdf')">Math Chapter-2: Algebra</a></li>
+      <li><a href="#" onclick="loadPDF('math_geometry_sheet.pdf')">Geometry Problem Sheet</a></li>
+    </ul>
+
+    <div class="pdf-container">
+      <iframe id="pdf-viewer" src="" title="PDF Viewer"></iframe>
+    </div>
+  </div>
+
+  <div class="footer">
+    © 2025-উদ্যম | Designed by MD. IMRAN ISLAM (Mathematics, RU) | All rights reserved.
+  </div>
+
+  <script>
+    function loadPDF(file) {
+      document.getElementById('pdf-viewer').src = file;
+    }
+  </script>
+
+</body>
+</html>
+
+
+
+
+    a:hover {
+      text-decoration: underline;
+    }
+
+    .pdf-container {
+      margin-top: 30px;
+      border: 1px solid #ccc;
+      background: #fff;
+      padding: 10px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.05);
+    }
+
+    iframe {
+      width: 100%;
+      height: 600px;
+      border: none;
+    }
+
     .footer {
       background: #0a3d62;
       color: #fff;
@@ -158,23 +264,4 @@
     <ul>
       <li><a href="#" onclick="loadPDF('math_ch1_set.pdf')">Math Chapter-1: Set & Function</a></li>
       <li><a href="#" onclick="loadPDF('math_ch2_algebra.pdf')">Math Chapter-2: Algebra</a></li>
-      <li><a href="#" onclick="loadPDF('math_geometry_sheet.pdf')">Geometry Problem Sheet</a></li>
-    </ul>
-
-    <div class="pdf-container">
-      <iframe id="pdf-viewer" src="" title="PDF Viewer"></iframe>
-    </div>
-  </div>
-
-  <div class="footer">
-    © 2025 উদ্যম | Designed by Imran (SSC-27) | All rights reserved.
-  </div>
-
-  <script>
-    function loadPDF(file) {
-      document.getElementById('pdf-viewer').src = file;
-    }
-  </script>
-
-</body>
-</html>
+      <li><a href="

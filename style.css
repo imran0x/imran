@@ -4,62 +4,54 @@
   box-sizing: border-box;
 }
 
-body {
-  font-family: 'Arial', sans-serif;
+body, html {
+  font-family: 'Segoe UI', sans-serif;
+  height: 100%;
   scroll-behavior: smooth;
-  background: #000;
-  color: #fff;
+  overflow-x: hidden;
 }
 
-.hero {
+.navbar {
+  position: fixed;
+  top: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 1000;
+  display: flex;
+  gap: 20px;
+  background: rgba(0,0,0,0.6);
+  padding: 10px 20px;
+  border-radius: 20px;
+}
+
+.navbar a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.panel {
   height: 100vh;
-  background: linear-gradient(135deg, #000 40%, #222 100%);
-  position: relative;
   display: flex;
   align-items: center;
   justify-content: center;
-  overflow: hidden;
+  flex-direction: column;
+  background: #1a1a1a;
+  color: #fff;
+  transition: background 0.5s ease;
 }
 
-.overlay {
-  text-align: center;
-  animation: fadeIn 2s ease-in-out;
+.panel.dark {
+  background: #000;
 }
 
-.title {
-  font-size: 4rem;
-  letter-spacing: 2px;
-}
-
-.subtitle {
-  font-size: 1.5rem;
-  color: #ccc;
-  margin-top: 10px;
-}
-
-.content {
-  padding: 80px 20px;
-  max-width: 900px;
-  margin: auto;
-  background: #111;
-}
-
-.content.dark {
-  background: #1c1c1c;
-}
-
-.content h2 {
-  font-size: 2rem;
+.panel h1, .panel h2 {
+  font-size: 3rem;
   margin-bottom: 20px;
 }
 
-@keyframes fadeIn {
-  from {
-    opacity: 0;
-    transform: translateY(40px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
+.panel p {
+  font-size: 1.2rem;
+  max-width: 600px;
+  text-align: center;
 }
